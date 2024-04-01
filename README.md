@@ -1,3 +1,3 @@
 to run
 
-npx expo start
+npm run android
