@@ -11,7 +11,7 @@ export default function App() {
         ></TextInput>
         <Button title="Add Goal"></Button>
       </View>
-      <View>
+      <View style={styles.goalsContainer}>
         <Text>List Of Goals...</Text>
       </View>
     </View>
@@ -20,14 +20,16 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer: {
+    flex: 1, // use flex so it will takes all the space
     paddingTop: 50,
     paddingHorizontal: 16, // add horizontal padding
   },
   inputContainer: {
+    flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center", // make button not stretched to fit the height
-    paddingBottom: 24, // create border with bottom padding
+    marginBottom: 24, // rename to margin bottom
     borderBottomWidth: 1,
     borderBottomColor: "#CCCCCC",
   },
@@ -37,5 +39,8 @@ const styles = StyleSheet.create({
     width: "70%", // decrease text input width
     marginRight: 8,
     padding: 8,
+  },
+  goalsContainer: {
+    flex: 4, // set flex to 4/5
   },
 });
